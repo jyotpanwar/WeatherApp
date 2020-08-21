@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<views:MvxContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:views="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="WeatherApp.Views.MainPage"
+    NavigationPage.HasNavigationBar="True"
+    Title="City Weather"
+    BackgroundColor="#7585BA">
+    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="320"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <BoxView BackgroundColor="#7585BA"
+                         HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.RowSpan="4"/>
+            <Image Aspect="AspectFill" Source="bg.png" Opacity="0.5"
+                       HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.RowSpan="4"/>
+            <Image Aspect="AspectFill" Source="overlay.png"
+                       HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.RowSpan="4"/>
+            <StackLayout Orientation="Horizontal" Spacing="20" VerticalOptions="Start"
+                         HorizontalOptions="FillAndExpand" Padding="0,20,20,20">
+                <SearchBar x:Name="SearchBar" Placeholder="Enter City, For Ex. Ghana"
+                           VerticalOptions="Start" HorizontalOptions="FillAndExpand"
+                           TextColor="White" PlaceholderColor="LightGray"/>
+                <Button ImageSource="location_icon.png" HeightRequest="50" WidthRequest="50"
+                        Background="{x:Null}" BackgroundColor="Transparent"/>
+                <Button Text="Search" CornerRadius="4" Command="{Binding SearchCommand}"
+                        CommandParameter="{Binding Source={x:Reference SearchBar}, Path=Text}"
+                        HeightRequest="40" MinimumWidthRequest="80"/>
+        </StackLayout>
+        <Grid Grid.Row="1">
+                <StackLayout Spacing="20">
+                    <StackLayout Orientation="Horizontal" Spacing="50" HorizontalOptions="Center">
+                        <StackLayout VerticalOptions="Center">
+                            <Image Source="{Binding WeatherImage}" WidthRequest="67" HeightRequest="50"/>
+                            <Label Text="{Binding WeatherForecast.Description}" Style="{StaticResource Small}"  LineBreakMode="WordWrap"/>
+                        </StackLayout>
+                        <StackLayout VerticalOptions="Center">
+                            <Label Text="{Binding WeatherObj.Name}" TextColor="White"
+                                   Style="{StaticResource Title}" HeightRequest="50" VerticalOptions="End"/>
+                            <Label Text="{Binding WeatherObj.Date}" Style="{StaticResource Small}"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="0">
+                            <Label Text="{Binding WeatherObj.Main.Temp, StringFormat='{0}'}" Style="{StaticResource Title}" FontSize="150"/>
+                            <Label Text="°" TextColor="White" FontSize="150" HorizontalOptions="Center"/>
+                        </StackLayout>
+                        <Label Text="CELSIUS" Margin="0,-30,0,0" Style="{StaticResource Small}"/>
+                    </StackLayout>
+                </StackLayout>
+            </Grid>
+         <!-->
+            added new grid at row 
+         <-->
+        <Grid Grid.Row="2">
+            <Grid WidthRequest="320" ColumnSpacing="10" HorizontalOptions="FillAndExpand"
+                VerticalOptions="EndAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackLayout Orientation="Vertical" Spacing="10" HorizontalOptions="CenterAndExpand">
+                    <Image Source="humidity.png" HeightRequest="25" HorizontalOptions="Center"/>
+                    <StackLayout Spacing="7" HorizontalOptions="CenterAndExpand">
+                        <Label Text="{Binding WeatherObj.Main.Humidity, StringFormat='{0}%'}" Style="{StaticResource Medium}"/>
+                        <Label Text="Humidity" Margin="0,-5,0,0" Style="{StaticResource Small}"/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Grid.Column="1" Orientation="Vertical" Spacing="10" HorizontalOptions="CenterAndExpand">
+                    <Image Source="wind.png" HeightRequest="25" HorizontalOptions="Center"/>
+                    <StackLayout Spacing="7" HorizontalOptions="CenterAndExpand">
+                        <Label Text="{Binding WeatherObj.Wind.Speed, StringFormat='{0}m/s'}"
+                               Style="{StaticResource Medium}"/>
+                        <Label Text="Wind" Margin="0,-5,0,0" Style="{StaticResource Small}"/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Grid.Column="2" Orientation="Vertical" Spacing="10" HorizontalOptions="CenterAndExpand">
+                    <Image Source="gauge.png" HeightRequest="25" HorizontalOptions="Center"/>
+                    <StackLayout Spacing="7" HorizontalOptions="CenterAndExpand">
+                        <Label Text="{Binding WeatherObj.Main.Pressure, StringFormat='{0}hpa'}"
+                               Style="{StaticResource Medium}"/>
+                        <Label Text="Pressure" Margin="0,-5,0,0" Style="{StaticResource Small}"/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Grid.Column="3" Orientation="Vertical" Spacing="10" HorizontalOptions="CenterAndExpand">
+                    <Image Source="cloudiness.png" HeightRequest="25" HorizontalOptions="Center"/>
+                    <StackLayout Spacing="7" HorizontalOptions="CenterAndExpand">
+                        <Label Text="{Binding WeatherObj.Clouds.All, StringFormat='{0}%'}" Style="{StaticResource Medium}"/>
+                        <Label Text="Cloudiness" Margin="0,-5,0,0" Style="{StaticResource Small}"/>
+                    </StackLayout>
+                </StackLayout>
+                </Grid>
+        </Grid>
+    </Grid>
+</views:MvxContentPage>
+
+
+

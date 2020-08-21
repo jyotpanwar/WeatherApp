@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MvvmCross.Forms</name>
+    </assembly>
+    <members>
+        <member name="P:MvvmCross.Forms.Presenters.Attributes.MvxPagePresentationAttribute.HostViewModelType">
+            <summary>
+            ViewModel Type to show as host before showing the actual view. Optional when not using switching between Forms views and native views.
+            </summary>
+        </member>
+        <member name="P:MvvmCross.Forms.Presenters.Attributes.MvxPagePresentationAttribute.WrapInNavigationPage">
+            <summary>
+            Wraps the Page in a MvxNavigationPage if set to true. If the current stack already is a MvxNavigationPage it will push the Page onto that.
+            </summary>
+            <value><c>true</c> if wrap in navigation page; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:MvvmCross.Forms.Presenters.Attributes.MvxPagePresentationAttribute.NoHistory">
+            <summary>
+            Clears the backstack of the current NavigationPage when set to true
+            </summary>
+            <value><c>true</c> if no history; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="M:MvvmCross.Forms.Presenters.MvxFormsPagePresenter.#ctor(MvvmCross.Forms.Presenters.IMvxFormsViewPresenter)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MvvmCross.Forms.Views.MvxFormsPagePresenter"/> class.
+            </summary>
+            <param name="platformPresenter">The native platform presenter from where the MvxFormsPagePresenter is created</param>
+        </member>
+    </members>
+</doc>
