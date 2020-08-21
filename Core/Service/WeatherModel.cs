@@ -12,8 +12,9 @@ namespace Core.Service
         public static string ApiKey;
         public static string ApiUrl;
         //public Task<WeatherInfo> FetchWeatherDataAsync(double latitide, double longitide);
-        public Task<WeatherInfo> FetchWeatherDataAsync(string city);
+        public Task<APIResponse> FetchWeatherDataAsync(string city);
     }
+
 
     public class WeatherService : IWeatherService
     {
@@ -37,7 +38,7 @@ namespace Core.Service
             return weatherObject;
         }*/
 
-        public async Task<WeatherInfo> FetchWeatherDataAsync(string city)
+        public async Task<APIResponse> FetchWeatherDataAsync(string city)
         {
             HttpClient httpClient = new HttpClient();
             var htmlEncodedCity = HttpUtility.UrlEncode(city, System.Text.Encoding.UTF8);
@@ -46,8 +47,19 @@ namespace Core.Service
             Console.WriteLine("APIURL : " + uri);
             var response = await httpClient.GetAsync(uri);
             var weatherJSON = response.Content.ReadAsStringAsync().Result;
-            var weatherObject = JsonConvert.DeserializeObject<WeatherInfo>(weatherJSON);
-            return weatherObject;
+            WeatherInfo weatherObject = JsonConvert.DeserializeObject<WeatherInfo>(weatherJSON);
+
+            var apiResponse = new APIResponse();
+            if (weatherObject.Name == null)
+            {
+                apiResponse.error = JsonConvert.DeserializeObject<Error>(weatherJSON);
+            }
+            else
+            {
+                apiResponse.WeatherInfo = weatherObject;
+            }
+
+            return apiResponse;
         }
     }
 }

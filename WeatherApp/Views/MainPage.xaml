@@ -28,11 +28,12 @@
                            VerticalOptions="Start" HorizontalOptions="FillAndExpand"
                            TextColor="White" PlaceholderColor="LightGray"/>
                 <Button ImageSource="location_icon.png" HeightRequest="50" WidthRequest="50"
-                        Background="{x:Null}" BackgroundColor="Transparent"/>
+                        BackgroundColor="Transparent" Command="{Binding SearchCurrentWeatherCommand}"/>
                 <Button Text="Search" CornerRadius="4" Command="{Binding SearchCommand}"
                         CommandParameter="{Binding Source={x:Reference SearchBar}, Path=Text}"
                         HeightRequest="40" MinimumWidthRequest="80"/>
-        </StackLayout>
+            </StackLayout>
+            <ActivityIndicator IsRunning="{Binding IsRunning}" Color="White"/>
         <Grid Grid.Row="1">
                 <StackLayout Spacing="20">
                     <StackLayout Orientation="Horizontal" Spacing="50" HorizontalOptions="Center">
