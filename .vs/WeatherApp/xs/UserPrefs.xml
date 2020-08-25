@@ -1,46 +1,25 @@
-﻿<Properties StartupConfiguration="{095204DD-D586-4D7C-8BA1-BEC536368727}|Default">
+﻿<Properties StartupConfiguration="{4426CF35-8004-400F-93FD-2766CB3B9807}|Unit Tests">
   <MonoDevelop.Ide.ItemProperties.WeatherApp.Android AndroidDesignerPreferredTheme="Theme.AppCompat.Light.NoActionBar" PreferredExecutionTarget="Android.nexus_7_2012_pie_9_0_-_api_28" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="WeatherApp.Android/Resources/AboutResources.txt">
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="WeatherApp/Views/MainPage.xaml" Line="9" Column="30" />
-      <File FileName="Core/ViewModels/MainViewModel.cs" Line="98" Column="33" />
-      <File FileName="Core/Service/WeatherModel.cs" Line="52" Column="6" />
-      <File FileName="Core/Models/WeatherInfo.cs" Line="21" Column="14" />
-      <File FileName="Core/Models/Clouds.cs" Line="1" Column="1" />
-      <File FileName="WeatherApp/App.xaml" Line="1" Column="1" />
-      <File FileName="Core/Service/ImageModel.cs" Line="21" Column="10" />
-      <File FileName="WeatherApp.Android/Resources/values/styles.xml" Line="1" Column="1" />
-      <File FileName="WeatherApp.Android/Resources/Resource.designer.cs" Line="1" Column="1" />
-      <File FileName="WeatherApp.Android/Resources/AboutResources.txt" Line="1" Column="1" />
+      <File FileName="../weatherpro/WeatherPro.UnitTest/MainViewModelTests.cs" Line="1" Column="1" />
+      <File FileName="../weatherpro/WeatherPro.UnitTest/WeatherServiceTests.cs" Line="15" Column="10" />
+      <File FileName="WeatherApp.Tests/UnitTest1.cs" Line="22" Column="1" />
+      <File FileName="WeatherApp.Tests/LocationServiceTest.cs" Line="36" Column="41" />
+      <File FileName="Core/Service/LocationModel.cs" Line="40" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="WeatherApp" expanded="True">
-            <Node name="Core" expanded="True">
-              <Node name="Dependencies" expanded="True" />
-              <Node name="Service" expanded="True" />
-              <Node name="ViewModels" expanded="True" />
-            </Node>
-            <Node name="WeatherApp" expanded="True">
-              <Node name="Views" expanded="True" />
-              <Node name="App.xaml" expanded="True" />
-            </Node>
-            <Node name="WeatherApp.Android" expanded="True">
-              <Node name="Resources" expanded="True">
-                <Node name="AboutResources.txt" selected="True" />
-              </Node>
-            </Node>
-          </Node>
+          <Node name="WeatherApp" expanded="True" />
         </State>
       </Pad>
       <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State>
-          <Value>WeatherObj</Value>
-        </State>
+        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.WeatherApp.Tests PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

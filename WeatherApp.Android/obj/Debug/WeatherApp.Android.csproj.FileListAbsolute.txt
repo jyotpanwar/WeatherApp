@@ -49,6 +49,7 @@
 /Users/Apple/Projects/WeatherApp/WeatherApp.Android/obj/Debug/res/drawable/gauge.png
 /Users/Apple/Projects/WeatherApp/WeatherApp.Android/obj/Debug/res/drawable/humidity.png
 /Users/Apple/Projects/WeatherApp/WeatherApp.Android/obj/Debug/res/drawable/wind.png
+/Users/Apple/Projects/WeatherApp/WeatherApp.Android/obj/Debug/res/drawable/location_icon.png
 /Users/Apple/Projects/WeatherApp/WeatherApp.Android/obj/Debug/uploadflags.txt
 /Users/Apple/Projects/WeatherApp/WeatherApp.Android/obj/Debug/resolvedassemblies.hash
 /Users/Apple/Projects/WeatherApp/WeatherApp.Android/obj/Debug/android/assets/Core.dll
@@ -607,4 +608,3 @@
 /Users/Apple/Projects/WeatherApp/WeatherApp.Android/obj/Debug/stamp/_GenerateJavaStubs.stamp
 /Users/Apple/Projects/WeatherApp/WeatherApp.Android/obj/Debug/stamp/_GeneratePackageManagerJava.stamp
 /Users/Apple/Projects/WeatherApp/WeatherApp.Android/obj/Debug/stamp/_ResolveLibraryProjectImports.stamp
-/Users/Apple/Projects/WeatherApp/WeatherApp.Android/obj/Debug/res/drawable/location_icon.png

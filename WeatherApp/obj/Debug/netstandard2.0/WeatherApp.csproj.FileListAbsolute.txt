@@ -2,6 +2,7 @@
 /Users/Apple/Projects/WeatherApp/WeatherApp/bin/Debug/netstandard2.0/WeatherApp.dll
 /Users/Apple/Projects/WeatherApp/WeatherApp/bin/Debug/netstandard2.0/ref/WeatherApp.dll
 /Users/Apple/Projects/WeatherApp/WeatherApp/bin/Debug/netstandard2.0/WeatherApp.pdb
+/Users/Apple/Projects/WeatherApp/WeatherApp/obj/Debug/netstandard2.0/WeatherApp.csprojAssemblyReference.cache
 /Users/Apple/Projects/WeatherApp/WeatherApp/obj/Debug/netstandard2.0/App.xaml.g.cs
 /Users/Apple/Projects/WeatherApp/WeatherApp/obj/Debug/netstandard2.0/Views/MainPage.xaml.g.cs
 /Users/Apple/Projects/WeatherApp/WeatherApp/obj/Debug/netstandard2.0/WeatherApp.AssemblyInfoInputs.cache
@@ -11,4 +12,3 @@
 /Users/Apple/Projects/WeatherApp/WeatherApp/obj/Debug/netstandard2.0/WeatherApp.dll
 /Users/Apple/Projects/WeatherApp/WeatherApp/obj/Debug/netstandard2.0/ref/WeatherApp.dll
 /Users/Apple/Projects/WeatherApp/WeatherApp/obj/Debug/netstandard2.0/WeatherApp.pdb
-/Users/Apple/Projects/WeatherApp/WeatherApp/obj/Debug/netstandard2.0/WeatherApp.csprojAssemblyReference.cache
