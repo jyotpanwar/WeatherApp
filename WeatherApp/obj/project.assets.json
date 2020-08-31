@@ -761,7 +761,7 @@
       "outputPath": "/Users/Apple/Projects/WeatherApp/WeatherApp/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/Apple/.nuget/NuGet/NuGet.Config"
+        "/Users/Apple/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
