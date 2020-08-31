@@ -1,0 +1,8 @@
+.vs
+Core/bin
+Core/obj
+WeatherApp.Android/bin
+WeatherApp.Android/obj
+WeatherApp/bin
+WeatherApp.iOS/obj
+WeatherApp/obj

@@ -31,6 +31,8 @@ namespace Weather.Core.ViewModels
         MvxCommand<string> _searchCommand;
         public MvxCommand<string> SearchCommand
         {
+            // TODO: you are creating a new command every time the getter is accessed,
+            // rather instantiate in constructor or do lazy instantiation here
             get => new MvxCommand<string>(SearchButtonClicked);
 
             set => _searchCommand = value;
@@ -41,6 +43,7 @@ namespace Weather.Core.ViewModels
         {
             get
             {
+                // TODO: see comments above
                 return new MvxCommand(SearchCurrentWeatherButtonClicked);
             }
             set => _searchCurrentWeather = value;
@@ -80,6 +83,7 @@ namespace Weather.Core.ViewModels
             }
             set
             {
+                // TODO : use SetProperty()
                 _weather = value;
                 RaisePropertyChanged(() => WeatherObj);
             }
@@ -94,6 +98,7 @@ namespace Weather.Core.ViewModels
             }
             set
             {
+                // TODO : use SetProperty()
                 _weatherForecast = value;
                 RaisePropertyChanged(() => WeatherForecast);
             }
@@ -108,12 +113,13 @@ namespace Weather.Core.ViewModels
             }
             set
             {
+                // TODO : use SetProperty()
                 _weatherImage = value;
                 RaisePropertyChanged(() => WeatherImage);
             }
         }
 
-
+        // TODO: you should add tests for this ViewModel
         public MainViewModel(IWeatherService _weatherService, ILocationService _locationService,
             IImageService _imageService, IDialogService _dialogService)
         {
