@@ -2756,12 +2756,11 @@
       ]
     },
     "System.Security.Cryptography.OpenSsl/4.3.0": {
-      "sha512": "h4CEgOgv5PKVF/HwaHzJRiVboL2THYCou97zpmhjghx5frc7fIvlkY1jL+lnIQyChrJDMNEXS6r7byGif8Cy4w==",
+      "sha512": "vOYy7Jv9KsG3ld2hLt0GoERd82SZi4BelrbXLwI9yFBYX7kpbvUCWYo4eyevk47cuJXZ9ZLVAryANcc7iY71aA==",
       "type": "package",
       "path": "system.security.cryptography.openssl/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.6/System.Security.Cryptography.OpenSsl.dll",
@@ -3367,19 +3366,23 @@
     ]
   },
   "packageFolders": {
-    "/Users/Apple/.nuget/packages/": {}
+    "/Users/martin/.nuget/packages/": {},
+    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/Apple/Projects/WeatherApp/Core/Core.csproj",
+      "projectUniqueName": "/Users/martin/Projects/ARO/New Starters/Jyotsna/Core/Core.csproj",
       "projectName": "Core",
-      "projectPath": "/Users/Apple/Projects/WeatherApp/Core/Core.csproj",
-      "packagesPath": "/Users/Apple/.nuget/packages/",
-      "outputPath": "/Users/Apple/Projects/WeatherApp/Core/obj/",
+      "projectPath": "/Users/martin/Projects/ARO/New Starters/Jyotsna/Core/Core.csproj",
+      "packagesPath": "/Users/martin/.nuget/packages/",
+      "outputPath": "/Users/martin/Projects/ARO/New Starters/Jyotsna/Core/obj/",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "/Users/Apple/.config/NuGet/NuGet.Config"
+        "/Users/martin/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.1"

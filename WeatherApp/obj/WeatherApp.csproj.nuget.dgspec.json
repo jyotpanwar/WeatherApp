@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "/Users/Apple/Projects/WeatherApp/WeatherApp/WeatherApp.csproj": {}
+    "/Users/martin/Projects/ARO/New Starters/Jyotsna/WeatherApp/WeatherApp.csproj": {}
   },
   "projects": {
-    "/Users/Apple/Projects/WeatherApp/WeatherApp/WeatherApp.csproj": {
+    "/Users/martin/Projects/ARO/New Starters/Jyotsna/WeatherApp/WeatherApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/Apple/Projects/WeatherApp/WeatherApp/WeatherApp.csproj",
+        "projectUniqueName": "/Users/martin/Projects/ARO/New Starters/Jyotsna/WeatherApp/WeatherApp.csproj",
         "projectName": "WeatherApp",
-        "projectPath": "/Users/Apple/Projects/WeatherApp/WeatherApp/WeatherApp.csproj",
-        "packagesPath": "/Users/Apple/.nuget/packages/",
-        "outputPath": "/Users/Apple/Projects/WeatherApp/WeatherApp/obj/",
+        "projectPath": "/Users/martin/Projects/ARO/New Starters/Jyotsna/WeatherApp/WeatherApp.csproj",
+        "packagesPath": "/Users/martin/.nuget/packages/",
+        "outputPath": "/Users/martin/Projects/ARO/New Starters/Jyotsna/WeatherApp/obj/",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "/Users/Apple/.config/NuGet/NuGet.Config"
+          "/Users/martin/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"

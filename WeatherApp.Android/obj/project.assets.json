@@ -2449,20 +2449,20 @@
     ]
   },
   "packageFolders": {
-    "/Users/Apple/.nuget/packages/": {}
+    "/Users/martin/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/Apple/Projects/WeatherApp/WeatherApp.Android/WeatherApp.Android.csproj",
+      "projectUniqueName": "/Users/martin/Projects/ARO/New Starters/Jyotsna/WeatherApp.Android/WeatherApp.Android.csproj",
       "projectName": "WeatherApp.Android",
-      "projectPath": "/Users/Apple/Projects/WeatherApp/WeatherApp.Android/WeatherApp.Android.csproj",
-      "packagesPath": "/Users/Apple/.nuget/packages/",
-      "outputPath": "/Users/Apple/Projects/WeatherApp/WeatherApp.Android/obj/",
+      "projectPath": "/Users/martin/Projects/ARO/New Starters/Jyotsna/WeatherApp.Android/WeatherApp.Android.csproj",
+      "packagesPath": "/Users/martin/.nuget/packages/",
+      "outputPath": "/Users/martin/Projects/ARO/New Starters/Jyotsna/WeatherApp.Android/obj/",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "/Users/Apple/.config/NuGet/NuGet.Config"
+        "/Users/martin/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "monoandroid90"
@@ -2473,11 +2473,11 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "/Users/Apple/Projects/WeatherApp/Core/Core.csproj": {
-              "projectPath": "/Users/Apple/Projects/WeatherApp/Core/Core.csproj"
+            "/Users/martin/Projects/ARO/New Starters/Jyotsna/Core/Core.csproj": {
+              "projectPath": "/Users/martin/Projects/ARO/New Starters/Jyotsna/Core/Core.csproj"
             },
-            "/Users/Apple/Projects/WeatherApp/WeatherApp/WeatherApp.csproj": {
-              "projectPath": "/Users/Apple/Projects/WeatherApp/WeatherApp/WeatherApp.csproj"
+            "/Users/martin/Projects/ARO/New Starters/Jyotsna/WeatherApp/WeatherApp.csproj": {
+              "projectPath": "/Users/martin/Projects/ARO/New Starters/Jyotsna/WeatherApp/WeatherApp.csproj"
             }
           }
         }

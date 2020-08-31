@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "OzvfIAHaovT0mgtGoO8w21+GEmJezJR/bVfmKHI4Q2DynxcYHvNHWSZwUKLw1IoliV1ELO15qaVeifVECx1BvQ==",
+  "dgSpecHash": "3QrwPbGA3XHNDRdmoj6depIjfvODRXwOP2so5b566RAlDpcdAbP4H4WIXRLQJ9Mtzxwq5m7bG3Vy7NsVPioi+w==",
   "success": true,
-  "projectFilePath": "/Users/Apple/Projects/WeatherApp/WeatherApp/WeatherApp.csproj",
+  "projectFilePath": "/Users/martin/Projects/ARO/New Starters/Jyotsna/WeatherApp/WeatherApp.csproj",
   "expectedPackageFiles": [
-    "/Users/Apple/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "/Users/Apple/.nuget/packages/mvvmcross/6.4.2/mvvmcross.6.4.2.nupkg.sha512",
-    "/Users/Apple/.nuget/packages/mvvmcross.forms/6.4.2/mvvmcross.forms.6.4.2.nupkg.sha512",
-    "/Users/Apple/.nuget/packages/netstandard.library/2.0.3/netstandard.library.2.0.3.nupkg.sha512",
-    "/Users/Apple/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512",
-    "/Users/Apple/.nuget/packages/xamarin.essentials/1.5.3.2/xamarin.essentials.1.5.3.2.nupkg.sha512",
-    "/Users/Apple/.nuget/packages/xamarin.forms/4.8.0.1269/xamarin.forms.4.8.0.1269.nupkg.sha512"
+    "/Users/martin/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "/Users/martin/.nuget/packages/mvvmcross/6.4.2/mvvmcross.6.4.2.nupkg.sha512",
+    "/Users/martin/.nuget/packages/mvvmcross.forms/6.4.2/mvvmcross.forms.6.4.2.nupkg.sha512",
+    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder/netstandard.library/2.0.3/netstandard.library.2.0.3.nupkg.sha512",
+    "/Users/martin/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512",
+    "/Users/martin/.nuget/packages/xamarin.essentials/1.5.3.2/xamarin.essentials.1.5.3.2.nupkg.sha512",
+    "/Users/martin/.nuget/packages/xamarin.forms/4.8.0.1269/xamarin.forms.4.8.0.1269.nupkg.sha512"
   ],
   "logs": []
 }
