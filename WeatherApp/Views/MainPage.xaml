@@ -22,17 +22,24 @@
                        HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.RowSpan="4"/>
             <Image Aspect="AspectFill" Source="overlay.png"
                        HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.RowSpan="4"/>
-            <StackLayout Orientation="Horizontal" Spacing="20" VerticalOptions="Start"
-                         HorizontalOptions="FillAndExpand" Padding="0,20,20,20">
-                <SearchBar x:Name="SearchBar" Placeholder="Enter City, For Ex. Ghana"
+            <Grid Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="50" />
+                    <ColumnDefinition Width="80" />
+                </Grid.ColumnDefinitions>
+                 <SearchBar x:Name="SearchBar" Placeholder="Enter City, For Ex. Ghana"
                            VerticalOptions="Start" HorizontalOptions="FillAndExpand"
-                           TextColor="White" PlaceholderColor="LightGray"/>
+                           TextColor="White" PlaceholderColor="LightGray" Grid.Column="0"/>
                 <Button ImageSource="location_icon.png" HeightRequest="50" WidthRequest="50"
-                        BackgroundColor="Transparent" Command="{Binding SearchCurrentWeatherCommand}"/>
+                        BackgroundColor="Transparent" Command="{Binding SearchCurrentWeatherCommand}" Grid.Column="1"/>
                 <Button Text="Search" CornerRadius="4" Command="{Binding SearchCommand}"
                         CommandParameter="{Binding Source={x:Reference SearchBar}, Path=Text}"
-                        HeightRequest="40" MinimumWidthRequest="80"/>
-            </StackLayout>
+                        HeightRequest="40" MinimumWidthRequest="80" Grid.Column="2"/>
+            </Grid>
             <ActivityIndicator IsRunning="{Binding IsRunning}" Color="White"/>
         <Grid Grid.Row="1">
                 <StackLayout Spacing="20">
@@ -50,7 +57,7 @@
                     <StackLayout>
                         <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="0">
                             <Label Text="{Binding WeatherObj.Main.Temp, StringFormat='{0}'}" Style="{StaticResource Title}" FontSize="150"/>
-                            <Label Text="°" TextColor="White" FontSize="150" HorizontalOptions="Center"/>
+                            <Label Text="°" TextColor="White" FontSize="50" HorizontalOptions="Center" />
                         </StackLayout>
                         <Label Text="CELSIUS" Margin="0,-30,0,0" Style="{StaticResource Small}"/>
                     </StackLayout>
@@ -102,6 +109,3 @@
         </Grid>
     </Grid>
 </views:MvxContentPage>
-
-
-

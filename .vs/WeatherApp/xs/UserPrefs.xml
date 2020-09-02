@@ -1,0 +1,41 @@
+﻿<Properties StartupConfiguration="{095204DD-D586-4D7C-8BA1-BEC536368727}|Default">
+  <MonoDevelop.Ide.ItemProperties.WeatherApp.Android PreferredExecutionTarget="Android.nexus_7_2012_pie_9_0_-_api_28" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="WeatherApp/App.xaml">
+    <Files>
+      <File FileName="../../../../usr/local/share/dotnet/sdk/3.1.401/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.DefaultItems.targets" Line="75" Column="60" />
+      <File FileName="WeatherApp/Views/MainPage.xaml.cs" Line="1" Column="1" />
+      <File FileName="WeatherApp/App.xaml" Line="25" Column="32" />
+      <File FileName="WeatherApp/App.xaml.cs" Line="1" Column="1" />
+      <File FileName="WeatherApp/Views/MainPage.xaml" Line="33" Column="42" />
+      <File FileName="Core/ViewModels/MainViewModel.cs" Line="1" Column="1" />
+      <File FileName="../WeatherApp copy/WeatherApp/Views/MainPage.xaml" Line="16" Column="37" />
+      <File FileName="../WeatherApp copy/WeatherApp/App.xaml" Line="1" Column="1" />
+      <File FileName="WeatherApp/AssemblyInfo.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="WeatherApp" expanded="True">
+            <Node name="Core" expanded="True">
+              <Node name="ViewModels" expanded="True" />
+            </Node>
+            <Node name="WeatherApp" expanded="True">
+              <Node name="Views" expanded="True">
+                <Node name="MainPage.xaml" expanded="True" />
+              </Node>
+              <Node name="App.xaml" expanded="True" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.WeatherApp.Tests PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.WeatherApp.iOS FirstBuild="True" />
+</Properties>

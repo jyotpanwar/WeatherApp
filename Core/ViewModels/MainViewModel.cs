@@ -14,40 +14,66 @@ namespace Weather.Core.ViewModels
         private IWeatherService WeatherService { get; }
         private ILocationService LocationService { get; }
         private IImageService ImageService { get; }
-        private IDialogService DialogService { get;  }
+        private IDialogService DialogService { get; }
 
+        #region ICommands
+        private readonly MvxCommand<string> _searchCommand;
+        public MvxCommand<string> SearchCommand => _searchCommand;
+
+        private readonly MvxCommand _searchCurrentWeather;
+        public MvxCommand SearchCurrentWeatherCommand => _searchCurrentWeather;
+        #endregion
+
+        #region Binding variable
         private bool _isServiceRunning = false;
         public Boolean IsServiceRunning
         {
             get => _isServiceRunning;
-            set
-            {
-                _isServiceRunning = value;
-                RaisePropertyChanged(()=> IsServiceRunning);
-            }
+            set => _ = SetProperty(ref _isServiceRunning, value);
         }
 
-
-        MvxCommand<string> _searchCommand;
-        public MvxCommand<string> SearchCommand
+        WeatherInfo _weather = new WeatherInfo();
+        public WeatherInfo WeatherObj
         {
-            // TODO: you are creating a new command every time the getter is accessed,
-            // rather instantiate in constructor or do lazy instantiation here
-            get => new MvxCommand<string>(SearchButtonClicked);
-
-            set => _searchCommand = value;
+            get => _weather;
+            set => _ = SetProperty(ref _weather, value);
         }
 
-        MvxCommand _searchCurrentWeather;
-        public MvxCommand SearchCurrentWeatherCommand
+        private WeatherCondition _weatherForecast;
+        public WeatherCondition WeatherForecast
         {
-            get
-            {
-                // TODO: see comments above
-                return new MvxCommand(SearchCurrentWeatherButtonClicked);
-            }
-            set => _searchCurrentWeather = value;
+            get => _weatherForecast;
+            set => _ = SetProperty(ref _weatherForecast, value);
         }
+
+        private ImageSource _weatherImage = "cloudiness.png";
+        public ImageSource WeatherImage
+        {
+            get => _weatherImage;
+            set => _ = SetProperty(ref _weatherImage, value);
+        }
+
+        #endregion
+
+        // TODO: you should add tests for this ViewModel
+        public MainViewModel(IWeatherService _weatherService, ILocationService _locationService,
+            IImageService _imageService, IDialogService _dialogService)
+        {
+            WeatherService = _weatherService;
+            LocationService = _locationService;
+            ImageService = _imageService;
+            DialogService = _dialogService;
+            _searchCommand = new MvxCommand<string>(SearchButtonClicked);
+            _searchCurrentWeather = new MvxCommand(SearchCurrentWeatherButtonClicked);
+        }
+
+        public async override void ViewAppeared()
+        {
+            base.ViewAppeared();
+            await SearchByCurrentLocation();
+        }
+
+        #region command implementation
 
         public async void SearchCurrentWeatherButtonClicked()
         {
@@ -74,61 +100,6 @@ namespace Weather.Core.ViewModels
             }
         }
 
-        WeatherInfo _weather = new WeatherInfo();
-        public WeatherInfo WeatherObj
-        {
-            get
-            {
-                return _weather;
-            }
-            set
-            {
-                // TODO : use SetProperty()
-                _weather = value;
-                RaisePropertyChanged(() => WeatherObj);
-            }
-        }
-
-        private WeatherCondition _weatherForecast;
-        public WeatherCondition WeatherForecast
-        {
-            get
-            {
-                return _weatherForecast;
-            }
-            set
-            {
-                // TODO : use SetProperty()
-                _weatherForecast = value;
-                RaisePropertyChanged(() => WeatherForecast);
-            }
-        }
-
-        private ImageSource _weatherImage = "cloudiness.png";
-        public ImageSource WeatherImage
-        {
-            get
-            {
-                return _weatherImage;
-            }
-            set
-            {
-                // TODO : use SetProperty()
-                _weatherImage = value;
-                RaisePropertyChanged(() => WeatherImage);
-            }
-        }
-
-        // TODO: you should add tests for this ViewModel
-        public MainViewModel(IWeatherService _weatherService, ILocationService _locationService,
-            IImageService _imageService, IDialogService _dialogService)
-        {
-            WeatherService = _weatherService;
-            LocationService = _locationService;
-            ImageService = _imageService;
-            DialogService = _dialogService;
-        }
-
         private async void SearchButtonClicked(string Text)
         {
             //search weather of city entered
@@ -139,7 +110,8 @@ namespace Weather.Core.ViewModels
                     message: "Please enter a city name.",
                     dismissButtonTitle: "Ok", dismissed: null);
             }
-            else {
+            else
+            {
                 try
                 {
                     IsServiceRunning = true;
@@ -155,12 +127,6 @@ namespace Weather.Core.ViewModels
                 }
                 IsServiceRunning = false;
             }
-        }
-
-        public async override void ViewAppeared()
-        {
-            base.ViewAppeared();
-            await SearchByCurrentLocation();
         }
 
         private async Task SearchByCurrentLocation()
@@ -190,5 +156,7 @@ namespace Weather.Core.ViewModels
         {
             WeatherImage = await ImageService.DownloadIconAsync(WeatherForecast.Icon);
         }
+
+        #endregion
     }
 }
